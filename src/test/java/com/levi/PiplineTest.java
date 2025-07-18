@@ -40,7 +40,7 @@ public class PiplineTest {
 
     @Test
     public void testPipline() throws Throwable {
-        // 关闭自动 flush
+        // 关闭自动 刷新命令
         asyncCommands.setAutoFlushCommands(false);
         List<RedisFuture<?>> futures = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
