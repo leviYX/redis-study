@@ -16,6 +16,8 @@
         <lettuce.version>6.1.8.RELEASE</lettuce.version>
         <jackson.version>2.13.1</jackson.version>
         <junit.version>4.13.1</junit.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <lombok.version>1.18.28</lombok.version>
     </properties>
 
     <dependencies>
@@ -42,7 +44,14 @@
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
-            <version>1.9.4</version>
+            <version>${commons-beanutils.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
     </dependencies>
 

@@ -2,25 +2,25 @@ package com.levi.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.levi.RedisClientFactory;
-import com.levi.entity.UserBean;
+import com.levi.entity.LoginUser;
 import com.levi.utils.RedisKeysUtil;
 import io.lettuce.core.RedisFuture;
 import org.apache.commons.beanutils.BeanUtils;
 
 import java.util.Map;
+import java.util.UUID;
 
-public class UserService {
+public class SessionService {
 
-
-    public String createUser(UserBean user){
-        String userId = user.getId();
-        validateUser(userId);
+    public String saveSession(LoginUser user){
         try {
-            String usersKey = RedisKeysUtil.buildUsersKey(userId);
+            // check user exists todo
+            String sessionId = UUID.randomUUID().toString().replaceAll("-","");
+            String sessionsKey = RedisKeysUtil.buildSessionsKey(sessionId);
             var syncCommands = RedisClientFactory.getSyncCommands();
             Map<String, String> userMap = BeanUtils.describe(user);
-            syncCommands.hmset(usersKey, userMap);
-            return userId;
+            syncCommands.hmset(sessionsKey, userMap);
+            return sessionId;
         }catch (Exception e){
             e.printStackTrace();
         }finally {
@@ -29,15 +29,16 @@ public class UserService {
         return null;
     }
 
-    public UserBean getUserById(String userId){
-        validateUser(userId);
+    public LoginUser getSessionById(String sessionId){
+        validateParam(sessionId);
         try {
-            String usersKey = RedisKeysUtil.buildUsersKey(userId);
+            String sessionsKey = RedisKeysUtil.buildSessionsKey(sessionId);
             var syncCommands = RedisClientFactory.getSyncCommands();
-            RedisFuture<Map<String, String>> userMapFuture = syncCommands.hgetall(usersKey);
+            RedisFuture<Map<String, String>> userMapFuture = syncCommands.hgetall(sessionsKey);
             Map<String, String> userMap = userMapFuture.get();
+            if(userMap == null) return null;
             ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.convertValue(userMap, UserBean.class);
+            return objectMapper.convertValue(userMap, LoginUser.class);
         }catch (Exception e){
             e.printStackTrace();
         }finally {
@@ -46,9 +47,7 @@ public class UserService {
         return null;
     }
 
-    private void validateUser(String userId){
-        if(userId == null) throw new IllegalArgumentException("user id is null");
+    private void validateParam(String id){
+        if(id == null) throw new IllegalArgumentException("id is null");
     }
-
-
 }
