@@ -1,5 +1,5 @@
 package com.levi.entity;
 
-public record User(Long id, String username, Integer age, String phone, String password, String webSite) {
-}
+public record User(String id, String username, String password,
+                   Integer age, String phone, String webSite) {}
 

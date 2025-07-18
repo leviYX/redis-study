@@ -40,10 +40,10 @@ public class HashTest {
         asyncCommands = connection.async();
         // RedisCommands<String, String> syncCommands = connection.sync();
 
-        userDB.put("+8613912345678", new User(1L, "zhangsan", 25, "+8613912345678", "123456", "http://xxxx"));
-        userDB.put("+8613512345678", new User(2L, "lisi", 25, "+8613512345678", "abcde", "http://xxxx"));
-        userDB.put("+8618812345678", new User(3L, "wangwu", 25, "+8618812345678", "654321", "http://xxxx"));
-        userDB.put("+8618912345678", new User(4L, "zhaoliu", 25, "+8618912345678", "98765", "http://xxxx"));
+        userDB.put("+8613912345678", new User("1", "zhangsan", "123456",25, "+8613912345678",  "http://xxxx"));
+        userDB.put("+8613512345678", new User("2", "lisi", "abcde",25, "+8613512345678",  "http://xxxx"));
+        userDB.put("+8618812345678", new User("3", "wangwu", "654321",25, "+8618812345678",  "http://xxxx"));
+        userDB.put("+8618912345678", new User("4", "zhaoliu", "98765",25, "+8618912345678",  "http://xxxx"));
     }
 
     @After
@@ -90,7 +90,7 @@ public class HashTest {
             }
         } else {
             System.out.println("缓存hit");
-            user = new User(UUID.randomUUID().timestamp(), "wangwu", 25, mobile, password, "http://xxxx");
+            user = new User(UUID.randomUUID().toString(), "wangwu", password,25, mobile, "http://xxxx");
             BeanUtils.populate(user, userCache);
         }
         if (password.equals(user.password())) {
