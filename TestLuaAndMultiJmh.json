@@ -1,0 +1,463 @@
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.lua
+
+# Run progress: 0.00% complete, ETA 00:04:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 1754.889 ops/ms
+Iteration   1: 584.344 ops/ms
+Iteration   2: 216.065 ops/ms
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_lua_jmhTest.lua_Throughput(TestLuaAndMultiJmh_lua_jmhTest.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+Result "com.levi.jmh.TestLuaAndMultiJmh.lua":
+  400.204 ops/ms
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.multi
+
+# Run progress: 16.67% complete, ETA 00:04:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 5.053 ops/ms
+Iteration   1: 5.232 ops/ms
+Iteration   2: 5.247 ops/ms
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_multi_jmhTest.multi_Throughput(TestLuaAndMultiJmh_multi_jmhTest.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+Result "com.levi.jmh.TestLuaAndMultiJmh.multi":
+  5.240 ops/ms
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.lua
+
+# Run progress: 33.33% complete, ETA 00:03:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.001 ms/op
+Iteration   1: 0.002 ms/op
+Iteration   2: 0.035 ms/op
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_lua_jmhTest.lua_AverageTime(TestLuaAndMultiJmh_lua_jmhTest.java:165)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+Result "com.levi.jmh.TestLuaAndMultiJmh.lua":
+  0.018 ms/op
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.multi
+
+# Run progress: 50.00% complete, ETA 00:02:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.192 ms/op
+Iteration   1: 0.189 ms/op
+Iteration   2: 0.188 ms/op
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_multi_jmhTest.multi_AverageTime(TestLuaAndMultiJmh_multi_jmhTest.java:165)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+Result "com.levi.jmh.TestLuaAndMultiJmh.multi":
+  0.188 ms/op
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.lua
+
+# Run progress: 66.66% complete, ETA 00:01:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.001 ±(99.9%) 0.001 ms/op
+Iteration   1: 0.001 ±(99.9%) 0.001 ms/op
+                 lua·p0.00:   ≈ 10⁻⁴ ms/op
+                 lua·p0.50:   ≈ 10⁻³ ms/op
+                 lua·p0.90:   0.001 ms/op
+                 lua·p0.95:   0.001 ms/op
+                 lua·p0.99:   0.001 ms/op
+                 lua·p0.999:  0.003 ms/op
+                 lua·p0.9999: 0.419 ms/op
+                 lua·p1.00:   32.375 ms/op
+
+Iteration   2: 0.001 ±(99.9%) 0.002 ms/op
+                 lua·p0.00:   ≈ 10⁻⁴ ms/op
+                 lua·p0.50:   ≈ 10⁻³ ms/op
+                 lua·p0.90:   0.001 ms/op
+                 lua·p0.95:   0.001 ms/op
+                 lua·p0.99:   0.001 ms/op
+                 lua·p0.999:  0.001 ms/op
+                 lua·p0.9999: 0.016 ms/op
+                 lua·p1.00:   86.770 ms/op
+
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_lua_jmhTest.lua_SampleTime(TestLuaAndMultiJmh_lua_jmhTest.java:237)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+Result "com.levi.jmh.TestLuaAndMultiJmh.lua":
+  N = 476541
+  mean =      0.001 ±(99.9%) 0.001 ms/op
+
+  Histogram, ms/op:
+    [ 0.000,  5.000) = 476532 
+    [ 5.000, 10.000) = 3 
+    [10.000, 15.000) = 3 
+    [15.000, 20.000) = 0 
+    [20.000, 25.000) = 0 
+    [25.000, 30.000) = 0 
+    [30.000, 35.000) = 1 
+    [35.000, 40.000) = 0 
+    [40.000, 45.000) = 0 
+    [45.000, 50.000) = 0 
+    [50.000, 55.000) = 0 
+    [55.000, 60.000) = 0 
+    [60.000, 65.000) = 0 
+    [65.000, 70.000) = 0 
+    [70.000, 75.000) = 0 
+    [75.000, 80.000) = 1 
+    [80.000, 85.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =     ≈ 10⁻⁴ ms/op
+     p(50.0000) =     ≈ 10⁻³ ms/op
+     p(90.0000) =      0.001 ms/op
+     p(95.0000) =      0.001 ms/op
+     p(99.0000) =      0.001 ms/op
+     p(99.9000) =      0.002 ms/op
+     p(99.9900) =      0.052 ms/op
+     p(99.9990) =     12.917 ms/op
+     p(99.9999) =     86.770 ms/op
+    p(100.0000) =     86.770 ms/op
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 10 s each
+# Measurement: 3 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.multi
+
+# Run progress: 83.33% complete, ETA 00:00:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 0.203 ±(99.9%) 0.001 ms/op
+Iteration   1: 0.191 ±(99.9%) 0.001 ms/op
+                 multi·p0.00:   0.158 ms/op
+                 multi·p0.50:   0.185 ms/op
+                 multi·p0.90:   0.208 ms/op
+                 multi·p0.95:   0.230 ms/op
+                 multi·p0.99:   0.293 ms/op
+                 multi·p0.999:  0.414 ms/op
+                 multi·p0.9999: 1.127 ms/op
+                 multi·p1.00:   2.159 ms/op
+
+Iteration   2: 0.196 ±(99.9%) 0.001 ms/op
+                 multi·p0.00:   0.156 ms/op
+                 multi·p0.50:   0.187 ms/op
+                 multi·p0.90:   0.220 ms/op
+                 multi·p0.95:   0.251 ms/op
+                 multi·p0.99:   0.319 ms/op
+                 multi·p0.999:  0.606 ms/op
+                 multi·p0.9999: 1.912 ms/op
+                 multi·p1.00:   2.957 ms/op
+
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_multi_jmhTest.multi_SampleTime(TestLuaAndMultiJmh_multi_jmhTest.java:237)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+Result "com.levi.jmh.TestLuaAndMultiJmh.multi":
+  N = 103274
+  mean =      0.194 ±(99.9%) 0.001 ms/op
+
+  Histogram, ms/op:
+    [0.000, 0.250) = 99065 
+    [0.250, 0.500) = 4104 
+    [0.500, 0.750) = 51 
+    [0.750, 1.000) = 25 
+    [1.000, 1.250) = 10 
+    [1.250, 1.500) = 5 
+    [1.500, 1.750) = 6 
+    [1.750, 2.000) = 4 
+    [2.000, 2.250) = 3 
+    [2.250, 2.500) = 0 
+    [2.500, 2.750) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =      0.156 ms/op
+     p(50.0000) =      0.186 ms/op
+     p(90.0000) =      0.214 ms/op
+     p(95.0000) =      0.241 ms/op
+     p(99.0000) =      0.307 ms/op
+     p(99.9000) =      0.502 ms/op
+     p(99.9900) =      1.624 ms/op
+     p(99.9990) =      2.931 ms/op
+     p(99.9999) =      2.957 ms/op
+    p(100.0000) =      2.957 ms/op
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.lua
+
+# Run progress: 100.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 1.324 ms/op
+Iteration   1: 0.071 ms/op
+Iteration   2: 0.066 ms/op
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_lua_jmhTest.lua_SingleShotTime(TestLuaAndMultiJmh_lua_jmhTest.java:306)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+
+# JMH version: 1.35
+# VM version: JDK 17.0.10, Java HotSpot(TM) 64-Bit Server VM, 17.0.10+11-LTS-240
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin/java
+# VM options: --enable-preview -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60390:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, single-shot each
+# Measurement: 3 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: com.levi.jmh.TestLuaAndMultiJmh.multi
+
+# Run progress: 100.00% complete, ETA 00:00:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 6.302 ms/op
+Iteration   1: 1.368 ms/op
+Iteration   2: 1.330 ms/op
+Iteration   3: <failure>
+
+java.lang.NullPointerException: Cannot invoke "io.lettuce.core.api.StatefulRedisConnection.close()" because "this.conn" is null
+	at com.levi.jmh.TestLuaAndMultiJmh.tearDown(TestLuaAndMultiJmh.java:40)
+	at com.levi.jmh.jmh_generated.TestLuaAndMultiJmh_multi_jmhTest.multi_SingleShotTime(TestLuaAndMultiJmh_multi_jmhTest.java:306)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:475)
+	at org.openjdk.jmh.runner.BenchmarkHandler$BenchmarkTask.call(BenchmarkHandler.java:458)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+
+
+
+
+# Run complete. Total time: 00:05:23
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                 Mode     Cnt    Score    Error   Units
+TestLuaAndMultiJmh.lua                   thrpt       2  400.204           ops/ms
+TestLuaAndMultiJmh.multi                 thrpt       2    5.240           ops/ms
+TestLuaAndMultiJmh.lua                    avgt       2    0.018            ms/op
+TestLuaAndMultiJmh.multi                  avgt       2    0.188            ms/op
+TestLuaAndMultiJmh.lua                  sample  476541    0.001 ±  0.001   ms/op
+TestLuaAndMultiJmh.lua:lua·p0.00        sample           ≈ 10⁻⁴            ms/op
+TestLuaAndMultiJmh.lua:lua·p0.50        sample           ≈ 10⁻³            ms/op
+TestLuaAndMultiJmh.lua:lua·p0.90        sample            0.001            ms/op
+TestLuaAndMultiJmh.lua:lua·p0.95        sample            0.001            ms/op
+TestLuaAndMultiJmh.lua:lua·p0.99        sample            0.001            ms/op
+TestLuaAndMultiJmh.lua:lua·p0.999       sample            0.002            ms/op
+TestLuaAndMultiJmh.lua:lua·p0.9999      sample            0.052            ms/op
+TestLuaAndMultiJmh.lua:lua·p1.00        sample           86.770            ms/op
+TestLuaAndMultiJmh.multi                sample  103274    0.194 ±  0.001   ms/op
+TestLuaAndMultiJmh.multi:multi·p0.00    sample            0.156            ms/op
+TestLuaAndMultiJmh.multi:multi·p0.50    sample            0.186            ms/op
+TestLuaAndMultiJmh.multi:multi·p0.90    sample            0.214            ms/op
+TestLuaAndMultiJmh.multi:multi·p0.95    sample            0.241            ms/op
+TestLuaAndMultiJmh.multi:multi·p0.99    sample            0.307            ms/op
+TestLuaAndMultiJmh.multi:multi·p0.999   sample            0.502            ms/op
+TestLuaAndMultiJmh.multi:multi·p0.9999  sample            1.624            ms/op
+TestLuaAndMultiJmh.multi:multi·p1.00    sample            2.957            ms/op
+TestLuaAndMultiJmh.lua                      ss       2    0.068            ms/op
+TestLuaAndMultiJmh.multi                    ss       2    1.349            ms/op

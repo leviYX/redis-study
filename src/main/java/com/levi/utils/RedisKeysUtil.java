@@ -12,4 +12,8 @@ public class RedisKeysUtil {
     public static String buildSessionsKey(String sessionId){
         return SESSIONS_PREFIX + sessionId;
     }
+
+    public static String buildTimeSeriesKey(String deviceName, String type) {
+        return deviceName + "#" + type;
+    }
 }
